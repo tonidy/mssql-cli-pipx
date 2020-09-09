@@ -60,10 +60,9 @@ setup(
     long_description_content_type='text/markdown',
     install_requires=install_requirements,
     include_package_data=True,
-    scripts=[
-        'mssql-cli.bat',
-        'mssql-cli'
-    ],
+    entry_points = {
+        'console_scripts': ['mssql-cli=mssqlcli.main:main'],
+    },
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
